@@ -1,34 +1,38 @@
-body{
-    background-color:#1EEEFF;
+.body1{
+    background-image: url("http://www.textures4photoshop.com/tex/thumbs/restaurant-food-frame-with-rustic-wood-background-free-93.jpg");
     background-repeat: no-repeat;
      background-attachment: fixed;
-     background-size: 100%;
+     background-size:100%;
+      margin: auto;
+    width: 50%;
+    padding: 300px;
 }
 
-.tab-pane{
-    color: white; 
-}
-button a {
-    width: 100px;
-    padding: 0px
-}
-
-
-h1{
+.h1{
     font-family: 'Brush Script MT', cursive;
-    font-size: 50px;
+    font-size: 200px;
     color: #FF1E1E;
-}
-
-.center{
-    text-align: center;
+     text-align:center;
     align-content:center;
-    margin-left:auto;
-    margin-right: auto;
-    display:block;
+     margin: auto;
+    width: 100%;
+    border: 3px;
+    padding: 10px;
 }
-#start_here{
-   background-color: red;
+#testcss{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 150px;
+    color: #FF1E1E;
+     text-align:center;
+    align-content:center;
+     margin: auto;
+    width: 100%;
+    border: 3px;
+    padding: 10px;
+}
+#start_here{ 
+    background-color:transparent;
+    border:transparent;
     font-family: 'Brush Script MT', cursive;
     font-size: 80px;
     color: white;
@@ -46,7 +50,7 @@ h1{
   transition: all 0.5s;
   cursor: pointer;
 }
-}
+
 #whatin{
     background-color:blue;
 }
@@ -61,3 +65,66 @@ h1{
   right: 0;
 }
 
+#results .list-group-item{ 
+    width: 200px;
+    background-color: #669900;
+    color: black;
+    
+    
+}
+.body2{
+    background-image:url("http://img.freepik.com/foto-gratis/tablas-de-madera-con-restaurante-borroso-de-fondo_1253-56.jpg?size=338&ext=jpg");
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+.center {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.center span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.center span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.center:hover span {
+  padding-right: 25px;
+}
+
+.center:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+#center1{
+    text-align: center;
+    align-content:center;
+}

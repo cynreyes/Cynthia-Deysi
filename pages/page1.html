@@ -5,16 +5,48 @@
         <script type= "text/javascript" src="../script.js"></script>
          <link rel="stylesheet" href="../style.css" type="text/css"/>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-       <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>-->
+
+       <style>
+       #map {
+        height: 500px;
+        width: 45%;
+        margin: 0 auto 0 auto; 
+
+       }
+    </style>
         <title> </title>
     </head>
-    <body>
-       <input id="type" name="Type" placeholder="Looking For..."> 
-<input id="Zipcode" name="Zipcode" placeholder="Zipcode"> <button id= "Searchbutton">Search</button>
-    <div id="map">My map will go here</div>
-    <div id="map" style="width:400px;height:400px;">
-<div id="Results"></div>
 
+  
+    <body class="body2">
+          <div id ="testcss" >Bon Apetite</h1></div> 
+     <div id= "center1"> <input id="type" class="center1" name="Type" placeholder="Looking For..."> <input id="Zipcode" name="Zipcode" placeholder="Zipcode">  <button id= "Searchbutton">Search</button> <button class="button"><a href="../index.html" class="active">home</a></button>
+</div>
+ 
+<div  id = "results" class="list-group">
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading"></h4>
+    <p class="list-group-item-text"></p>
+</a>
+</div>
+<div id="map">
+    <script>
+      function initMap() {
+        var uluru = {lat: 40.705311, lng: -74.258188};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9fHBiJCFfD9RF4Xm7XNoWFcd_JU1VHmU&callback=initMap">
+    </script>
+</div>
 
     </body>
 </html>

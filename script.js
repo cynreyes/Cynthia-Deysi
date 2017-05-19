@@ -1,6 +1,6 @@
 /*global$*/
 $(document).ready(function(){
-    $("#Searchbutton").click(function() {d
+    $("#Searchbutton").click(function() {
         var type= $("#type").val();
         var near= $("#Zipcode").val();
         var url= "https://api.foursquare.com/v2/venues/search?client_id=GJP350DH3G2PX544RXXXML0B22PC32D4XYDTN5OGIH2X0HTE&client_secret=H0MTUBOXYGXFS1OJHRRAT23MCDL5KZKGJGHXK15X1BZZR4UC&v=20130815";
@@ -12,10 +12,14 @@ console.log(url11)
             var Venues=response.response.venues;
             for (var i=0; i<Venues.length; i++){
             console.log(response.response.venues[i].name);
-             $("#Results").append(response.response.venues[i].name + "<br>"); 
-             $("#Results").append(response.response.venues[i].contact.formattedPhone + "<br>"); 
-             $("#Results").append(response.response.venues[i].location.formattedAddress + "<br>"); 
+            var contact = response.response.venues[i].contact.formattedPhone
+            var address = response.response.venues[i].location.formattedAddress
+            var h4='<a href="#" class="list-group-item">' + '<h4 class="list-group-item-heading">' + response.response.venues[i].name + "</h4>" + '<p class="list-group-item-text">' + address + '<br>' + 'Phone #:' + "" + contact + '</p>' + "</a>";
+            var venue=response.response.venues[i];
+             $("#results").append(h4); 
             }
+            
+           
  /*           
 function myMap() {
   var mapCanvas = document.getElementById("map");
@@ -25,6 +29,6 @@ function myMap() {
   var map = new google.maps.Map(mapCanvas, mapOptions);
 }  */      
         
-        });
+        }); 
     });
 });
