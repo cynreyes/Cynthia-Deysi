@@ -128,3 +128,7 @@ p {
     text-align: center;
     align-content:center;
 }
+#results{
+    display:block;
+    float:left;
+}
